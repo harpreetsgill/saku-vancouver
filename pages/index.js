@@ -11,7 +11,7 @@ const galleryDbId = process.env.GALLERY_DB_ID;
 const locationsDbId = process.env.LOCATIONS_DB_ID;
 const instagramToken = process.env.INSTAGRAM_ID;
 
-export default function HomePage({ misc, gallery, locations, instagram }) {
+export default function HomePage({ misc, gallery, locations }) {
   const heroData = misc.filter((item) => item.type === "Hero Text");
   const franchiseeData = misc.filter((item) => item.type === "Franchisee Card");
 
@@ -22,7 +22,7 @@ export default function HomePage({ misc, gallery, locations, instagram }) {
       </Head>
       <Hero data={heroData} />
       <Gallery data={gallery} />
-      <InstagramFeed data={instagram} />
+      <InstagramFeed token={instagramToken} />
       <Locations data={[locations, franchiseeData]} />
     </>
   );
@@ -69,32 +69,32 @@ export async function getStaticProps() {
     });
   }
 
-  const instaDataLatest = [];
-  try {
-    const instaResp = await fetch(
-      `https://graph.instagram.com/me/media?fields=id,media_url,permalink,caption&access_token=${instagramToken}`
-    );
+  // const instaDataLatest = [];
+  // try {
+  //   const instaResp = await fetch(
+  //     `https://graph.instagram.com/me/media?fields=id,media_url,permalink,caption&access_token=${instagramToken}`
+  //   );
 
-    const instaData = await instaResp.json();
+  //   const instaData = await instaResp.json();
 
-    if (instaData.data.length > 0) {
-      const numberOfSlides =
-        instaData.data.length >= 6 ? 6 : instaData.data.length;
-      for (let i = 0; i < numberOfSlides; i++) {
-        instaDataLatest.push(instaData.data[i]);
-      }
-    }
-  } catch (error) {
-    console.log(`Error fetching Instagram feed: ${error.message}`);
-    for (let i = 0; i < 6; i++) {
-      instaDataLatest.push({
-        id: `inst-${i}`,
-        media_url: InstaPlaceholder.src,
-        permalink: "https://www.instagram.com/sakuvancouver/",
-        status: "loading",
-      });
-    }
-  }
+  //   if (instaData.data.length > 0) {
+  //     const numberOfSlides =
+  //       instaData.data.length >= 6 ? 6 : instaData.data.length;
+  //     for (let i = 0; i < numberOfSlides; i++) {
+  //       instaDataLatest.push(instaData.data[i]);
+  //     }
+  //   }
+  // } catch (error) {
+  //   console.log(`Error fetching Instagram feed: ${error.message}`);
+  //   for (let i = 0; i < 6; i++) {
+  //     instaDataLatest.push({
+  //       id: `inst-${i}`,
+  //       media_url: InstaPlaceholder.src,
+  //       permalink: "https://www.instagram.com/sakuvancouver/",
+  //       status: "loading",
+  //     });
+  //   }
+  // }
 
   const galleryData = [];
   try {
@@ -150,7 +150,6 @@ export async function getStaticProps() {
       misc: miscData,
       gallery: galleryData,
       locations: locationsData,
-      instagram: instaDataLatest,
     },
   };
 }
