@@ -31,6 +31,7 @@ export default function Locations(props) {
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
+              alt="People sitting and eating inside a restaurant"
               />
               <Button
                 type="phone"

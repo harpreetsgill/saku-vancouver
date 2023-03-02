@@ -45,7 +45,7 @@ export default function Header({ data: instagramData }) {
         <Link href="/#locations" className={styles.text}>
           Locations
         </Link>
-        <a href={instagramAccountLink} target="_blank">
+        <a href={instagramAccountLink} target="_blank" rel="noopener">
           <Image src={Instagram} alt="Instagram Logo" width={27} height={27} />
         </a>
       </nav>

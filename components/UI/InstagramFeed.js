@@ -8,7 +8,7 @@ export default function InstagramFeed({ data: instagramFeed }) {
     <Grid className={styles["instagram-feed"]}>
       {instagramFeed.map((item) => (
         <div className={styles.cell} key={item.id}>
-          <a href={item.permalink} target="_blank">
+          <a href={item.permalink} target="_blank" rel="noopener">
             <Image src={item.media_url} alt="Image 1" fill sizes={imageSize} />
           </a>
         </div>
