@@ -1,7 +1,7 @@
 .header {
   height: 70px;
   width: 100%;
-  margin: 34px auto;
+  margin: 20px auto 34px auto;
   border: 0.5px solid #000000;
   border-radius: 35px;
   display: flex;
@@ -217,5 +217,14 @@ a.text:hover::after {
 @media (max-width: 425px) {
   .header {
     margin-top: 25px;
+    height: 55px;
+  }
+  .logo-mark {
+    height: 55px;
+    width: 55px;
+  }
+  .logo-type {
+    height: 58px;
+    width: 100px;
   }
 }
