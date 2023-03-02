@@ -1,0 +1,11 @@
+.error {
+    max-width: 400px;
+    margin: 20px auto 50px auto;
+    display: flex;
+    align-items: center;
+}
+
+.error h2 {
+    font-size: 60px;
+    margin-right: 25px;
+}
