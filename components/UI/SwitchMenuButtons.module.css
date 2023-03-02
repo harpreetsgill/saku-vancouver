@@ -1,0 +1,28 @@
+.switch-menu-buttons {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.switch-menu-buttons button {
+    background: none;
+    border: none;
+    padding: 8px 20px;
+    background-color: rgba(218, 138, 54, .6);
+    cursor: pointer;
+}
+
+.switch-menu-buttons button:nth-child(1) {
+    border-radius: 18px 0 0 18px;
+    padding-left: 30px;
+}
+
+.switch-menu-buttons button:nth-last-child(1) {
+    border-radius: 0 18px 18px 0;
+    padding-right: 30px;
+}
+
+.active {
+    background-color: rgba(218, 138, 54, 1) !important;
+}

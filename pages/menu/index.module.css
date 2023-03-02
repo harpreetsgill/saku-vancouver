@@ -1,0 +1,174 @@
+.switch-menu-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 34px;
+}
+
+.menu {
+  display: flex;
+  margin-left: -18px; /* gutter size offset */
+  margin-bottom: 5px;
+  width: auto;
+}
+
+.menu-column {
+  padding-left: 18px; /* gutter size */
+  background-clip: padding-box;
+}
+
+.menu h2 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 7px;
+}
+
+.menu h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.menu-column .card {
+  margin-bottom: 18px;
+}
+
+.col-1 {
+  width: 33% !important;
+}
+
+.col-2 {
+  width: 67% !important;
+}
+
+.header {
+  position: relative;
+}
+
+.col-2 .header {
+  display: flex;
+  align-items: center;
+}
+
+.col-2 .header .header-title {
+  margin-right: 18px;
+  margin-bottom: 0;
+}
+
+.header .header-desc {
+  font-size: 12px;
+  line-height: 13px;
+  max-width: 250px;
+  padding-right: 40px;
+}
+
+.header .header-icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+}
+
+.body {
+  margin-top: 26px;
+}
+
+.col-2 .body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item {
+  margin-bottom: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-between;
+}
+
+.col-2 .item {
+  width: 45%;
+}
+
+.item h3 {
+  width: 80%;
+  margin-bottom: 7px;
+}
+
+.item span {
+  width: 20%;
+  text-align: right;
+}
+
+.item p {
+  width: 70%;
+  font-size: 12px;
+}
+
+.item .children {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  padding-left: 5px;
+}
+
+.item .children h4,
+.item .children span {
+  font-size: 12px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.note {
+  font-size: 12px;
+  opacity: 0.36;
+  margin-top: 30px;
+}
+
+@media (max-width: 835px) {
+  .col-1 {
+    width: 50% !important;
+  }
+  .col-2 {
+    width: 50% !important;
+  }
+  .col-2 .item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .col-1 {
+    width: 100% !important;
+  }
+  .col-2 {
+    width: 100% !important;
+  }
+  .col-1 .item,
+  .col-2 .item {
+    width: 45%;
+  }
+  .header {
+    display: flex;
+  }
+  .header h2 {
+    margin-right: 18px;
+  }
+  .header p {
+    max-width: 80% !important;
+  }
+  .col-1 .body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 510px) {
+  .col-1 .body {
+    flex-direction: column;
+  }
+  .col-1 .item,
+  .col-2 .item {
+    width: 100%;
+  }
+}

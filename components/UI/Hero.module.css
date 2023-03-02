@@ -1,0 +1,58 @@
+.hero {
+  margin: 117px 0 166px;
+}
+
+.hero h2 {
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 85px;
+  text-align: justify;
+  text-transform: uppercase;
+}
+
+.hero h2 span {
+  display: inline-block;
+  color: transparent;
+  width: 123px;
+  height: 55px;
+  overflow: hidden;
+  background-image: url("../../public/cutlet.jpeg");
+  background-position: center;
+  background-size: 110%;
+  background-repeat: no-repeat;
+  border-radius: 28px;
+}
+
+@media (max-width: 1000px) {
+  .hero h2 {
+    font-size: 65px;
+    line-height: 68px;
+    overflow-wrap: break-word;
+  }
+  .hero h2 span {
+    height: 48px;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero h2 {
+    font-size: 55px;
+    line-height: 58px;
+  }
+  .hero h2 span {
+    height: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .hero {
+    margin: 90px 0 125px;
+  }
+  .hero h2 {
+    font-size: 45px;
+    line-height: 48px;
+  }
+  .hero h2 span {
+    height: 33px;
+  }
+}

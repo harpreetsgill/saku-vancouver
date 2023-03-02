@@ -1,0 +1,185 @@
+.locations {
+  font-weight: 400;
+  margin-bottom: 100px;
+}
+
+.anchor-link {
+  display: block;
+  padding-top: 110px;
+}
+
+.robson-image {
+  position: relative;
+  grid-column: 1 / 3;
+}
+
+.robson-image img {
+  object-fit: cover;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.robson-text {
+  grid-column: 3 / 4;
+  position: relative;
+}
+
+.broadway-image {
+  position: relative;
+}
+
+.broadway-image img {
+  object-fit: cover;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.broadway-text {
+  position: relative;
+  grid-column: 2;
+}
+
+.locations address {
+  font-style: normal;
+  margin-bottom: 22px;
+}
+
+.locations .days {
+  display: block;
+}
+
+.locations .time {
+  display: block;
+}
+
+.update {
+  opacity: 0.36;
+  margin-top: 20px;
+}
+
+.update img {
+  position: relative;
+  bottom: -1.5px;
+}
+
+.update span {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.locations .phone-button {
+  position: absolute;
+  right: 24px;
+  bottom: 17px;
+}
+
+.order-doordash-button {
+  position: absolute;
+  bottom: 0;
+}
+
+.order-ubereats-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.franchisee a {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 940px) {
+  .order-doordash-button,
+  .order-ubereats-button {
+    padding-right: 20px;
+  }
+  .order-doordash-button::after,
+  .order-ubereats-button::after {
+    content: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .locations {
+    grid-template-columns: 1fr 1fr;
+  }
+  .robson-image,
+  .broadway-image {
+    grid-column: 1;
+  }
+  .robson-text,
+  .broadway-text {
+    grid-column: 2;
+  }
+  .franchisee {
+    grid-column: 1 / 3;
+  }
+  .order-doordash-button,
+  .order-ubereats-button {
+    padding-right: 45px;
+  }
+  .order-doordash-button::after,
+  .order-ubereats-button::after {
+    content: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_23_223)'%3E%3Cpath d='M8.125 0C7.67559 0 7.3125 0.363086 7.3125 0.8125C7.3125 1.26191 7.67559 1.625 8.125 1.625H10.2248L5.11367 6.73867C4.79629 7.05605 4.79629 7.57148 5.11367 7.88887C5.43105 8.20625 5.94648 8.20625 6.26387 7.88887L11.375 2.7752V4.875C11.375 5.32441 11.7381 5.6875 12.1875 5.6875C12.6369 5.6875 13 5.32441 13 4.875V0.8125C13 0.363086 12.6369 0 12.1875 0H8.125ZM2.03125 0.8125C0.908984 0.8125 0 1.72148 0 2.84375V10.9688C0 12.091 0.908984 13 2.03125 13H10.1562C11.2785 13 12.1875 12.091 12.1875 10.9688V8.125C12.1875 7.67559 11.8244 7.3125 11.375 7.3125C10.9256 7.3125 10.5625 7.67559 10.5625 8.125V10.9688C10.5625 11.1922 10.3797 11.375 10.1562 11.375H2.03125C1.80781 11.375 1.625 11.1922 1.625 10.9688V2.84375C1.625 2.62031 1.80781 2.4375 2.03125 2.4375H4.875C5.32441 2.4375 5.6875 2.07441 5.6875 1.625C5.6875 1.17559 5.32441 0.8125 4.875 0.8125H2.03125Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_23_223'%3E%3Crect width='13' height='13' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  }
+}
+
+@media (max-width: 650px) {
+  .order-doordash-button,
+  .order-ubereats-button {
+    width: 100%;
+  }
+  .order-ubereats-button {
+    left: 0;
+    right: unset;
+    bottom: 42px;
+  }
+}
+
+@media (max-width: 550px) {
+  .locations {
+    grid-template-rows: 200px auto 200px auto auto;
+  }
+  .robson-image {
+    grid-column: 1 / 3;
+  }
+  .robson-image img {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+  }
+  .robson-text {
+    grid-column: 1 / 3;
+    display: flex;
+  }
+  .broadway-image {
+    grid-column: 1 / 3;
+  }
+  .broadway-image img {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+  }
+  .broadway-text {
+    grid-column: 1 / 3;
+    display: flex;
+  }
+  .address-hours {
+    max-width: 50%;
+    margin-right: 9px;
+  }
+  .button {
+    margin-left: 9px;
+  }
+  .buttons a {
+    position: relative;
+    display: block;
+    bottom: unset;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 365px) {
+  .robson-text, .broadway-text {
+    flex-direction: column;
+  }
+  .address-hours {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
