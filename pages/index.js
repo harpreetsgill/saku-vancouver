@@ -124,5 +124,6 @@ export async function getStaticProps() {
       gallery: galleryData,
       locations: locationsData,
     },
+    revalidate: 60,
   };
 }
