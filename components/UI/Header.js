@@ -27,6 +27,7 @@ export default function Header({ data: instagramData }) {
           src={LogoType}
           alt="Saku Logo Text"
           className={styles["logo-type"]}
+          priority
         />
       </Link>
       <nav className={navDisplay ? styles.active : ""}>
@@ -36,6 +37,7 @@ export default function Header({ data: instagramData }) {
             alt="A hand icon pointing to the right"
             width={15}
             height={15}
+            priority
           />
           Order
         </Link>

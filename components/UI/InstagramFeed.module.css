@@ -6,6 +6,7 @@
 .cell a {
   display: block;
   height: 100%;
+  position: relative;
 }
 
 .instagram-feed .cell img {
