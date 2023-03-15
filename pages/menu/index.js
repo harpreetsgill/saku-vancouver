@@ -241,7 +241,7 @@ export async function getStaticProps() {
       desc: page.properties.Description[page.properties.Description.type][0]
         .plain_text,
       note: page.properties.Note[page.properties.Note.type][0].plain_text,
-      icon: page.icon.file.url,
+      icon: page.icon[page.icon.type].url,
       layout: page.properties.Layout[page.properties.Layout.type].name,
     };
   });
@@ -258,7 +258,7 @@ export async function getStaticProps() {
       desc: page.properties.Description[page.properties.Description.type][0]
         .plain_text,
       note: page.properties.Note[page.properties.Note.type][0].plain_text,
-      icon: page.icon.file.url,
+      icon: page.icon[page.icon.type].url,
       layout: page.properties.Layout[page.properties.Layout.type].name,
     };
   });

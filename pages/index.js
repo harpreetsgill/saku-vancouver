@@ -77,7 +77,7 @@ export async function getStaticProps() {
         id: item.id,
         number: item.properties["Item Number"].number,
         name: item.properties.Name.title[0].plain_text,
-        cover: item.cover.file.url,
+        cover: item.cover[item.cover.type].url,
         text:
           item.properties.Text.rich_text.length !== 0
             ? item.properties.Text.rich_text[0].plain_text

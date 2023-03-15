@@ -4,7 +4,11 @@ const nextConfig = {
   images: {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    domains: ["s3.us-west-2.amazonaws.com", "scontent.cdninstagram.com"],
+    domains: [
+      "saku-vancouver.s3.us-west-2.amazonaws.com",
+      "s3.us-west-2.amazonaws.com",
+      "scontent.cdninstagram.com",
+    ],
   },
 };
 
