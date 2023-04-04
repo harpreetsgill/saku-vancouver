@@ -119,7 +119,13 @@ export default function MenuPage({ regularMenu, takeoutMenu }) {
         <Image
           src={category.icon}
           width={28}
-          height={20}
+          height={
+            category.title === "Noodles"
+              ? 25
+              : category.title === "Drinks"
+              ? 21
+              : 20
+          }
           alt={category.title + " icon"}
           className={styles["header-icon"]}
         />
