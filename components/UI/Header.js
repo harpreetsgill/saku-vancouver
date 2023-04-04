@@ -31,7 +31,7 @@ export default function Header({ data: instagramData }) {
         />
       </Link>
       <nav className={navDisplay ? styles.active : ""}>
-        <Link href="/#" className={styles.red}>
+        <Link href="/#locations" className={styles.red}>
           <Image
             src={HandIcon}
             alt="A hand icon pointing to the right"

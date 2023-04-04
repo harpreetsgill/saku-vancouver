@@ -6,7 +6,12 @@ export default function Gallery({ data: galleryData }) {
   return (
     <Grid className={styles.gallery}>
       <div className={styles.bowl}>
-        <Image src={galleryData[0].cover} alt="A noodle bowl" fill />
+        <Image
+          src={galleryData[0].cover}
+          alt="A noodle bowl"
+          width="300"
+          height="300"
+        />
       </div>
       <div className={styles.bowlText}>
         <h3>{galleryData[0].name}</h3>
@@ -16,14 +21,16 @@ export default function Gallery({ data: galleryData }) {
         <Image
           src={galleryData[1].cover}
           alt="Knife in a hand cutting peppers."
-          fill
+          width="300"
+          height="300"
         />
       </div>
       <div className={styles.pork}>
         <Image
           src={galleryData[2].cover}
           alt="Freshly cut Pork placed on a chopping board."
-          fill
+          width="300"
+          height="300"
         />
       </div>
       <div className={styles.porkText}>
@@ -34,7 +41,8 @@ export default function Gallery({ data: galleryData }) {
         <Image
           src={galleryData[3].cover}
           alt="A Japanese styled interior of the Saku Restaurant."
-          fill
+          width="620"
+          height="300"
         />
       </div>
       <div className={styles.interiorText}>

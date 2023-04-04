@@ -8,6 +8,10 @@ const nextConfig = {
       "saku-vancouver.s3.us-west-2.amazonaws.com",
       "s3.us-west-2.amazonaws.com",
       "scontent.cdninstagram.com",
+      "images.unsplash.com",
+      "static.wixstatic.com",
+      "lh5.googleusercontent.com",
+      "raw.githubusercontent.com",
     ],
   },
 };
