@@ -330,6 +330,5 @@ export async function getStaticProps() {
       regularMenu: regularMenuItems,
       takeoutMenu: takeoutMenuItems,
     },
-    revalidate: 60,
   };
 }
