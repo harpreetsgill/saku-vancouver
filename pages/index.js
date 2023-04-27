@@ -3,7 +3,6 @@ import Hero from "../components/UI/Hero";
 import Gallery from "../components/UI/Gallery";
 import InstagramFeed from "../components/UI/InstagramFeed";
 import Locations from "../components/UI/Locations";
-import InstaPlaceholder from "../public/insta-placeholder.jpeg";
 import { getBlock, getDatabase } from "../lib/notion";
 
 const miscDbId = process.env.MISC_DB_ID;
