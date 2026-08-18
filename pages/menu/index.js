@@ -277,7 +277,7 @@ export async function getStaticProps() {
   );
 
   const takeoutItems = await Promise.all(
-    regularMenuItems.map(async (category) => {
+    takeoutMenuItems.map(async (category) => {
       const pages = await getBlock(category.id);
       return pages[0];
     })

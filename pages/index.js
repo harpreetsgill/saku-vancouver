@@ -8,7 +8,6 @@ import { getBlock, getDatabase } from "../lib/notion";
 const miscDbId = process.env.MISC_DB_ID;
 const galleryDbId = process.env.GALLERY_DB_ID;
 const locationsDbId = process.env.LOCATIONS_DB_ID;
-const instagramToken = process.env.INSTAGRAM_ID;
 
 export default function HomePage({ misc, gallery, locations }) {
   const heroData = misc.filter((item) => item.type === "Hero Text");
@@ -21,7 +20,7 @@ export default function HomePage({ misc, gallery, locations }) {
       </Head>
       <Hero data={heroData} />
       <Gallery data={gallery} />
-      <InstagramFeed token={instagramToken} />
+      <InstagramFeed />
       <Locations data={[locations, franchiseeData]} />
     </>
   );

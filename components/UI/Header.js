@@ -17,7 +17,7 @@ export default function Header({ data: instagramData }) {
 
   const headerClasses = `${styles.header} ${navDisplay && styles.expanded}`;
 
-  const instagramAccountLink = instagramData[0].link;
+  const instagramAccountLink = instagramData?.[0]?.link ?? "";
 
   return (
     <header className={headerClasses}>

@@ -8,10 +8,11 @@ import "../styles/globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }) {
-  const footerData = pageProps.misc.filter(
+  const misc = pageProps.misc ?? [];
+  const footerData = misc.filter(
     (item) => item.type !== "Hero Text" && item.type !== "Franchisee Card"
   );
-  const instagramData = pageProps.misc.filter(
+  const instagramData = misc.filter(
     (item) => item.type === "Instagram Account"
   );
 

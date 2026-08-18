@@ -10,15 +10,15 @@ export default function Footer({ data: footerData }) {
   return (
     <footer className={styles.footer}>
       <div className={styles.copyright}>
-        {copyright[0].content}
-        <a href={email[0].link}>{email[0].content}</a>
+        {copyright[0]?.content}
+        <a href={email[0]?.link}>{email[0]?.content}</a>
       </div>
       <div className={styles["social-media"]}>
-        <a href={facebook[0].link} target="_blank" rel="noreferrer">
-          {facebook[0].content}
+        <a href={facebook[0]?.link} target="_blank" rel="noreferrer">
+          {facebook[0]?.content}
         </a>
-        <a href={instagram[0].link} target="_blank" rel="noreferrer">
-          {instagram[0].content}
+        <a href={instagram[0]?.link} target="_blank" rel="noreferrer">
+          {instagram[0]?.content}
         </a>
       </div>
     </footer>
